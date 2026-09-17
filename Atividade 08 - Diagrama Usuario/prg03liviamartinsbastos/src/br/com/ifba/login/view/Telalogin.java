@@ -9,9 +9,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import br.com.ifba.usuario.view.TelaCadastroUsuario;
-import br.com.ifba.usuario.entity.Usuario;
 /**
- * 
  *
  * @author Lívia Martins Bastos
  */
@@ -227,25 +225,15 @@ private void deixarImagemRedonda() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        // Captura o login digitado pelo usuário.
+        // TODO add your handling code here:
+        
+        // Captura os dados digitados pelo usuário.
 String loginDigitado = txtLogin.getText();
-
-// Captura a senha digitada pelo usuário.
 String senhaDigitada = new String(txtSenha.getPassword());
 
-// Cria um objeto da classe Usuario.
-Usuario usuario = new Usuario();
-
-// Preenche o login do objeto usando o setter.
-usuario.setLogin(loginDigitado);
-
-// Preenche a senha do objeto usando o setter.
-usuario.setSenha(senhaDigitada);
-
-// Exibe no label os dados armazenados no objeto Usuario.
-// Exibe no label os dados armazenados no objeto Usuario.
+// Exibe os dados no label.
 lblMensagem.setText(
-    "Login: " + usuario.getLogin() + " | Senha: " + usuario.getSenha()
+    "Login: " + loginDigitado + " | Senha: " + senhaDigitada
 );
     }//GEN-LAST:event_btnEntrarActionPerformed
 
